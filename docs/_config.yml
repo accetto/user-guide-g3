@@ -1,0 +1,49 @@
+# spell-checker: disable
+
+### Site settings
+
+title: User Guide
+description: How to use Docker images from ACCETTO.
+
+### Build settings
+
+url: https://accetto.github.io/docs-user-guide
+
+theme: just-the-docs
+
+aux_links:
+  GitHub: https://github.com/accetto
+  Docker Hub: https://hub.docker.com/u/accetto/
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+### UI settings
+
+color_scheme: nil
+
+callouts_level: quiet # or loud
+callouts:
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: green
+  note:
+    title: Note
+    color: purple
+  warning:
+    title: Warning
+    color: red
