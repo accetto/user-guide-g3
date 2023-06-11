@@ -2,12 +2,12 @@
 
 ### Site settings
 
-title: User Guide
+title: User Guide G3
 description: How to use Docker images from ACCETTO.
 
 ### Build settings
 
-url: https://accetto.github.io/docs-user-guide
+url: https://accetto.github.io/user-guide-g3
 
 theme: just-the-docs
 
