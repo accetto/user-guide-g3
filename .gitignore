@@ -9,4 +9,7 @@ _site/
 vendor/
 
 # Ignore other artifacts
+.developer/
 .markdownlint.json
+scrap*
+TODO*
