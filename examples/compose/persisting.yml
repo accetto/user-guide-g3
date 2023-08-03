@@ -1,0 +1,59 @@
+# docker compose -f persisting.yml -p example-persisting up -d
+# docker compose -f persisting.yml -p example-persisting down
+# docker compose -f persisting.yml -p example-persisting down --volumes
+# docker compose -f persisting.yml -p example-persisting down --volumes --rmi all
+
+### User Guide G3
+### Sample compose file
+
+volumes:
+  firefox-profile-volume:
+
+services:
+
+  firefox-using-volumes:
+    profiles:
+      - all
+      - firefox-using-volumes
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+      target: stage_persisting-firefox
+    image: example-persisting:firefox
+    container_name: example-persisting-firefox-using-volumes
+    hostname: example-persisting-firefox-using-volumes
+    shm_size: "256m"
+    environment:
+      - VNC_RESOLUTION=1024x768
+    ports:
+      - "45901:5901"  # VNC
+      - "46901:6901"  # noVNC
+    volumes:
+      - type: volume
+        source: firefox-profile-volume
+        target: /home/headless/.mozilla/firefox
+
+  firefox-using-binds:
+    profiles:
+      - all
+      - firefox-using-binds
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+      target: stage_persisting-firefox
+    image: example-persisting:firefox
+    container_name: example-persisting-firefox-using-binds
+    hostname: example-persisting-firefox-using-binds
+    environment:
+      - VNC_RESOLUTION=1024x768
+    ports:
+      - "45902:5901"  # VNC
+      - "46902:6901"  # noVNC
+    volumes:
+      - type: bind
+        source: ${HOME}/compose-samples/firefox-profile
+        target: /home/headless/.mozilla/firefox
+      - type: bind
+        source: ${HOME}/compose-samples/Downloads
+        target: /home/headless/Downloads
+

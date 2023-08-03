@@ -1,0 +1,64 @@
+# docker compose -f basic.yml -p example-basic up -d
+# docker compose -f basic.yml -p example-basic down
+# docker compose -f basic.yml -p example-basic down --volumes
+# docker compose -f basic.yml -p example-basic down --volumes --rmi all
+
+### User Guide G3
+### Sample compose file
+
+services:
+
+  ubuntu:
+    profiles:
+      - all
+      - ubuntu
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+      target: stage_basic-ubuntu
+    image: example-basic:ubuntu
+    container_name: example-basic-ubuntu
+    hostname: example-basic-ubuntu
+    shm_size: "256m"
+    environment:
+      - VNC_RESOLUTION=1024x768
+    ports:
+      - "45901:5901"  # VNC
+      - "46901:6901"  # noVNC
+
+  debian:
+    profiles:
+      - all
+      - debian
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+      target: stage_basic-ubuntu
+    image: example-basic:debian
+    container_name: example-basic-debian
+    hostname: example-basic-debian
+    shm_size: "256m"
+    environment:
+      - VNC_RESOLUTION=1024x768
+    ports:
+      - "45902:5901"  # VNC
+      - "46902:6901"  # noVNC
+
+  opengl:
+    profiles:
+      - all
+      - opengl
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+      target: stage_basic-opengl
+    image: example-basic:opengl
+    container_name: example-basic-opengl
+    hostname: example-basic-opengl
+    shm_size: "256m"
+    environment:
+      - VNC_RESOLUTION=1024x768
+    ports:
+      - "45903:5901"  # VNC
+      - "46903:6901"  # noVNC
+

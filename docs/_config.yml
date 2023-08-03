@@ -1,8 +1,18 @@
 # spell-checker: disable
 
-### Site settings
+### Development settings
 
-title: User Guide G3
+### This fixes the problem with 'livereload' not detecting changes of files in subfolders.
+### You can also use 'bundle exec jekyll serve --livereload --force_polling' instead.
+# force_polling: true
+
+### Site settings
+### These are used to personalize your new site. If you look in the HTML files,
+### you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
+### You can create any custom variable you would like, and they will be accessible
+### in the templates via {{ site.myvariable }}.
+title: User Guide
+subtitle: accetto images G3
 description: How to use Docker images from ACCETTO.
 
 ### Build settings
@@ -11,11 +21,16 @@ url: https://accetto.github.io/user-guide-g3
 
 theme: just-the-docs
 
+# Aux links for the upper right navigation
 aux_links:
-  GitHub: https://github.com/accetto
+  GitHub: https://github.com/accetto/
   Docker Hub: https://hub.docker.com/u/accetto/
 
+# Makes Aux links open in a new tab. Default is false
+aux_links_new_tab: false
+
 exclude:
+  # from https://github.com/jekyll/jekyll/blob/master/lib/site_template/_config.yml:
   - .sass-cache/
   - .jekyll-cache/
   - gemfiles/
@@ -26,13 +41,26 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  # specific to this website
+  - .scrap
 
 ### UI settings
 
-color_scheme: nil
+# color_scheme: nil
+color_scheme: light
+# color_scheme: dark
+
+enable_copy_code_button: true
 
 callouts_level: quiet # or loud
+
 callouts:
+  definition:
+    title: Definition
+    color: callout-golden
+  explain:
+    title: Explanation
+    color: grey-dk
   highlight:
     color: yellow
   important:
@@ -43,7 +71,57 @@ callouts:
     color: green
   note:
     title: Note
-    color: purple
+    color: callout-pale-grey
+  pitfall:
+    title: Pitfall
+    color: red
+  temporary:
+    title: TEMPORARY
+    color: callout-gaudy
+  terminal:
+    title: Terminal
+    color: grey-lt
+  tip:
+    title: Tip
+    color: green
+  use_case:
+    title: Use case
+    color: callout-brown
   warning:
     title: Warning
     color: red
+
+# Enable or disable heading anchors
+heading_anchors: true
+
+# Sort order for navigation links
+# nav_sort: case_insensitive # default, equivalent to nil
+# nav_sort: case_sensitive # Capital letters sorted before lowercase
+
+# Enable or disable the site search
+# Supports true (default) or false
+search_enabled: true
+search:
+  # Split pages into sections that can be searched individually
+  # Supports 1 - 6, default: 2
+  heading_level: 2
+  # Maximum amount of previews per search result
+  # Default: 3
+  previews: 2
+  # Maximum amount of words to display before a matched word in the preview
+  # Default: 5
+  preview_words_before: 3
+  # Maximum amount of words to display after a matched word in the preview
+  # Default: 10
+  preview_words_after: 3
+  # Set the search token separator
+  # Default: /[\s\-/]+/
+  # Example: enable support for hyphenated search words
+  tokenizer_separator: /[\s/]+/
+  # Display the relative url in search results
+  # Supports true (default) or false
+  rel_url: true
+  # Enable or disable the search button that appears in the bottom right corner of every page
+  # Supports true or false (default)
+  button: false
+

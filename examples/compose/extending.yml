@@ -1,0 +1,83 @@
+# docker compose -f extending.yml -p example-extending up -d
+# docker compose -f extending.yml -p example-extending down
+# docker compose -f extending.yml -p example-extending down --volumes
+# docker compose -f extending.yml -p example-extending down --volumes --rmi all
+
+### User Guide G3
+### Sample compose file
+
+volumes:
+  jekyll-firefox-profile:
+  jekyll-vscode-config:
+  jekyll-vscode-extensions:
+  jekyll-gems:
+  jekyll-projects:
+
+services:
+
+  overriding-example:
+    profiles:
+      - all
+      - overriding-example
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+      target: stage_extending_overriding-example
+    image: example-extending:overriding-example
+    container_name: example-extending-overriding-example
+    hostname: example-extending-overriding-example
+    ports:
+      - "45901:5901"  # VNC
+      - "46901:6901"  # noVNC
+
+  jekyll-vscode-firefox:
+    profiles:
+      - all
+      - jekyll-vscode-firefox
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+      target: stage_extending_jekyll-vscode-firefox
+    image: example-extending:jekyll-vscode-firefox
+    container_name: example-extending-jekyll-vscode-firefox
+    hostname: example-extending-jekyll-vscode-firefox
+    shm_size: "256m"
+    environment:
+      - VNC_RESOLUTION=1024x768
+    ports:
+      - "44002:4000"  # jekyll
+      - "45902:5901"  # VNC
+      - "46902:6901"  # noVNC
+    volumes:
+      - type: volume
+        source: jekyll-firefox-profile
+        target: /home/headless/.mozilla/firefox
+      - type: volume
+        source: jekyll-vscode-config
+        target: /home/headless/.config/Code
+      - type: volume
+        source: jekyll-vscode-extensions
+        target: /home/headless/.vscode/
+      - type: volume
+        source: jekyll-gems
+        target: /home/headless/gems
+      - type: volume
+        source: jekyll-projects
+        target: /home/headless/projects
+
+  testing-pitfall-one:
+    profiles:
+      - all
+      - testing-pitfall-one
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+      target: stage_extending_fixing-pitfall-one
+    image: example-extending:testing-pitfall-one
+    container_name: example-extending-testing-pitfall-one
+    hostname: example-extending-testing-pitfall-one
+    environment:
+      - VNC_RESOLUTION=1024x768
+    ports:
+      - "45903:5901"  # VNC
+      - "46903:6901"  # noVNC
