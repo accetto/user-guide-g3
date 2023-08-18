@@ -73,7 +73,7 @@ There are also extended generic images containing [Mesa3D][mesa3d] (OpenGL/WebGL
 
 ### Debian
 
-The [Debian][dockerhub-debian] images are based on `Debian 11`:
+The [Debian][dockerhub-debian] images are based on the current `Debian 12` and the previous `Debian 11`:
 
 - [accetto/debian-vnc-xfce-g3][debian-vnc-xfce-g3]
 
@@ -246,7 +246,7 @@ The images contain the current version from the `Debian 11` distribution.
 
 [this-container-screenshot]: {{site.baseurl}}/assets/images/open-version-sticker.gif
 
-[this-animation-headless-generic-debian]: {{site.baseurl}}/assets/images/animation-headless-generic-debian.png
+[this-animation-headless-generic-debian]: {{site.baseurl}}/assets/images/animation-headless-generic-debian.gif
 
 [this-animation-headless-generic-opengl]: {{site.baseurl}}/assets/images/animation-headless-generic-opengl-live.gif
 
