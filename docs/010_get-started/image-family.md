@@ -221,7 +221,7 @@ The repository [accetto/debian-vnc-xfce-python-g3][debian-vnc-xfce-python-g3] co
 The images are intended for creating encapsulated development and testing environments.
 They come in several variations and can be further extended and customized.
 
-The images contain the current version from the `Debian 11` distribution.
+The images contain `Python` from the current `Debian 12` distribution.
 
 ![animation-headless-coding-python][this-animation-headless-coding-python]
 
