@@ -23,7 +23,7 @@ theme: just-the-docs
 
 # Aux links for the upper right navigation
 aux_links:
-  GitHub: https://github.com/accetto/
+  GitHub: https://github.com/accetto/user-guide-g3/
   Docker Hub: https://hub.docker.com/u/accetto/
 
 # Makes Aux links open in a new tab. Default is false
