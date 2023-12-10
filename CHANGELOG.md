@@ -6,6 +6,11 @@
 
 ***
 
+### Release 23.12
+
+- Added `NVM` images
+- Some other minor updates
+
 ### Release 23.08
 
 First release.
