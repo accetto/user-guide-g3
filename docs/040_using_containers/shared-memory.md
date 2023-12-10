@@ -101,10 +101,7 @@ For example, changing the `SHM` size to 256MB:
     }
   },
   "default-shm-size": "256M",
-  "experimental": false,
-  "features": {
-    "buildkit": true
-  }
+  "experimental": false
 }
 ```
 
