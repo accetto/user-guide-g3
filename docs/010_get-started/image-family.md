@@ -144,7 +144,7 @@ The images contain the current version from the `Ubuntu 22.04 LTS` distribution.
 
 ### Inkscape
 
-The repository [accetto/ubuntu-vnc-xfce-inkscape-g3][ubuntu-vnc-xfce-inkscape-g3] contains the images that bring the popular vector drawing application [Inkscape][inkscape].
+The repository [accetto/ubuntu-vnc-xfce-inkscape-g3][ubuntu-vnc-xfce-inkscape-g3] contains images that bring the popular vector drawing application [Inkscape][inkscape].
 
 The images contain the current version from the `Ubuntu 22.04 LTS` distribution.
 
@@ -152,7 +152,7 @@ The images contain the current version from the `Ubuntu 22.04 LTS` distribution.
 
 ### Blender
 
-The repository [accetto/ubuntu-vnc-xfce-blender-g3][ubuntu-vnc-xfce-blender-g3] contains the images that bring the popular 3D creation suite [Blender][blender].
+The repository [accetto/ubuntu-vnc-xfce-blender-g3][ubuntu-vnc-xfce-blender-g3] contains images that bring the popular 3D creation suite [Blender][blender].
 
 The images contain the current version from the `Ubuntu 22.04 LTS` distribution.
 
@@ -160,7 +160,7 @@ The images contain the current version from the `Ubuntu 22.04 LTS` distribution.
 
 ### FreeCAD
 
-The repository [accetto/ubuntu-vnc-xfce-freecad-g3][ubuntu-vnc-xfce-freecad-g3] contains the images that bring the popular 3D parametric modeler [FreeCAD][freecad].
+The repository [accetto/ubuntu-vnc-xfce-freecad-g3][ubuntu-vnc-xfce-freecad-g3] contains images that bring the popular 3D parametric modeler [FreeCAD][freecad].
 
 The images contain the current `FreeCAD` release installed from the author's public repository.
 
@@ -177,7 +177,7 @@ The images contain the current `FreeCAD` release installed from the author's pub
 
 ### Postman
 
-The repository [accetto/debian-vnc-xfce-postman-g3][debian-vnc-xfce-postman-g3] contains the images that bring the popular [Postman App][postman] with *Scratch Pad* for building and testing REST APIs.
+The repository [accetto/debian-vnc-xfce-postman-g3][debian-vnc-xfce-postman-g3] contains images that bring the popular [Postman App][postman] with *Scratch Pad* for building and testing REST APIs.
 
 {: .highlight}
 > The advantage of *Scratch Pad* is, that you can use *Postman App* without signing-up and to develop and store all your assets locally.
@@ -191,7 +191,7 @@ The repository [accetto/debian-vnc-xfce-postman-g3][debian-vnc-xfce-postman-g3] 
 
 ### Visual Studio Code
 
-The repository [accetto/debian-vnc-xfce-vscode-g3][debian-vnc-xfce-vscode-g3] contains the images that bring the popular programming editor [Visual Studio Code][vscode].
+The repository [accetto/debian-vnc-xfce-vscode-g3][debian-vnc-xfce-vscode-g3] contains images that bring the popular programming editor [Visual Studio Code][vscode].
 
 The images are intended for creating encapsulated development and testing environments.
 They come in several variations and can be further extended and customized.
@@ -205,18 +205,39 @@ The included `Visual Studio Code` is the current release installed from the auth
 
 ### Node.js
 
-The repository [accetto/debian-vnc-xfce-nodejs-g3][debian-vnc-xfce-nodejs-g3] contains the images that bring the popular JavaScript-based development platform [Node.js][nodejs].
+The repository [accetto/debian-vnc-xfce-nodejs-g3][debian-vnc-xfce-nodejs-g3] contains images that bring the popular JavaScript-based development platform [Node.js][nodejs].
 
 The images are intended for creating encapsulated development and testing environments.
 They come in several variations and can be further extended and customized.
 
 The included `Node.js` is the current release installed from the author's public repository.
 
+Publishing of these images will be phased out, because there is more flexible alternative in the repository [accetto/debian-vnc-xfce-nvm-g3][debian-vnc-xfce-nvm-g3].
+
+However, you can always build the images yourself using the GitHub project.
+
 ![animation-headless-coding-nodejs][this-animation-headless-coding-nodejs]
+
+### NVM
+
+The repository [accetto/debian-vnc-xfce-nvm-g3][debian-vnc-xfce-nvm-g3] contains images for headless working with the popular JavaScript-based development platform [Node.js][nodejs].
+
+The images are intended for creating encapsulated development and testing environments.
+They come in several variations and can be further extended and customized.
+
+However, instead of a particular `Node.js` version they contain the free open-source utility [NVM][nvm] (Node Version Manager), which allows installing and using multiple versions of `Node.js` and `npm` concurrently.
+
+For example, the command `nvm install --lts` will install the latest LTS (Long Term Support) version of `Node.js`.
+
+These images are meant as a more flexible alternative to the ones from the repository [accetto/debian-vnc-xfce-nodejs-g3][debian-vnc-xfce-nodejs-g3], that contain particular `Node.js` versions.
+
+Publishing those images will be phased out, but you can always build them yourself using the GitHub project.
+
+![animation-headless-coding-nvm][this-animation-headless-coding-nvm]
 
 ### Python
 
-The repository [accetto/debian-vnc-xfce-python-g3][debian-vnc-xfce-python-g3] contains the images that bring the popular programming language [Python][python].
+The repository [accetto/debian-vnc-xfce-python-g3][debian-vnc-xfce-python-g3] contains images that bring the popular programming language [Python][python].
 
 The images are intended for creating encapsulated development and testing environments.
 They come in several variations and can be further extended and customized.
@@ -274,6 +295,8 @@ The images contain `Python` from the current `Debian 12` distribution.
 
 [this-animation-headless-coding-nodejs]: {{site.baseurl}}/assets/images/animation-headless-coding-nodejs-live.gif
 
+[this-animation-headless-coding-nvm]: {{site.baseurl}}/assets/images/animation-headless-coding-nvm-live.gif
+
 [this-animation-headless-coding-python]: {{site.baseurl}}/assets/images/animation-headless-coding-python-live.gif
 
 [ubuntu-vnc-xfce-g3]: https://hub.docker.com/r/accetto/ubuntu-vnc-xfce-g3
@@ -293,6 +316,7 @@ The images contain `Python` from the current `Debian 12` distribution.
 [ubuntu-vnc-xfce-inkscape-g3]: https://hub.docker.com/r/accetto/ubuntu-vnc-xfce-inkscape-g3
 
 [debian-vnc-xfce-nodejs-g3]: https://hub.docker.com/r/accetto/debian-vnc-xfce-nodejs-g3
+[debian-vnc-xfce-nvm-g3]: https://hub.docker.com/r/accetto/debian-vnc-xfce-nvm-g3
 [debian-vnc-xfce-postman-g3]: https://hub.docker.com/r/accetto/debian-vnc-xfce-postman-g3
 [debian-vnc-xfce-python-g3]: https://hub.docker.com/r/accetto/debian-vnc-xfce-python-g3
 [debian-vnc-xfce-vscode-g3]: https://hub.docker.com/r/accetto/debian-vnc-xfce-vscode-g3
@@ -310,6 +334,7 @@ The images contain `Python` from the current `Debian 12` distribution.
 [inkscape]: https://inkscape.org/
 [mesa3d]: https://mesa3d.org/
 [nodejs]: https://www.nodejs.org/
+[nvm]: https://github.com/nvm-sh/nvm
 [novnc]: https://github.com/kanaka/noVNC
 [postman]: https://www.postman.com/downloads/
 [python]: https://www.python.org/

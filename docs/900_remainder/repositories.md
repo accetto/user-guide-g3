@@ -42,6 +42,7 @@ Concise list of Docker Hub repositories containing the *accetto images* describe
 ### Headless programming
 
 - [accetto/debian-vnc-xfce-nodejs-g3][debian-vnc-xfce-nodejs-g3]
+- [accetto/debian-vnc-xfce-nvm-g3][debian-vnc-xfce-nvm-g3]
 - [accetto/debian-vnc-xfce-postman-g3][debian-vnc-xfce-postman-g3]
 - [accetto/debian-vnc-xfce-python-g3][debian-vnc-xfce-python-g3]
 - [accetto/debian-vnc-xfce-vscode-g3][debian-vnc-xfce-vscode-g3]
@@ -73,6 +74,7 @@ Concise list of Docker Hub repositories containing the *accetto images* describe
 [debian-vnc-xfce-firefox-g3]: https://hub.docker.com/r/accetto/debian-vnc-xfce-firefox-g3
 
 [debian-vnc-xfce-nodejs-g3]: https://hub.docker.com/r/accetto/debian-vnc-xfce-nodejs-g3
+[debian-vnc-xfce-nvm-g3]: https://hub.docker.com/r/accetto/debian-vnc-xfce-nvm-g3
 [debian-vnc-xfce-postman-g3]: https://hub.docker.com/r/accetto/debian-vnc-xfce-postman-g3
 [debian-vnc-xfce-python-g3]: https://hub.docker.com/r/accetto/debian-vnc-xfce-python-g3
 [debian-vnc-xfce-vscode-g3]: https://hub.docker.com/r/accetto/debian-vnc-xfce-vscode-g3
