@@ -39,6 +39,10 @@ If applications are crashing, you may need to increase the shared memory (SHM) s
 
 Read more about it [here][this-shared-memory].
 
+### Empty VNC password
+
+Be aware, that some versions of some VNC viewers could have problems with empty VNC passwords (e.g. `MobaXterm` or `TurboVNC`).
+
 ## Keeping data
 
 ### Using bind mounts for $HOME
