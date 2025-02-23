@@ -642,7 +642,7 @@ $HOME/tests/test-01.sh
 > drwxr-xr-x 1 headless headless 4096 tests
 > </pre>
 
-The test image and container acn be removed using the following command:
+The test image and container can be removed using the following command:
 
 ```shell
 docker compose --profile testing-pitfall-one -f extending.yml -p example-extending down --rmi all
